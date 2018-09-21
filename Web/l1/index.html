@@ -1,0 +1,51 @@
+<!-- Объявление формата документа -->
+<!DOCTYPE html>
+<!-- Основной тег html -->
+<html>
+<!-- Техническая информация о документе -->
+<head>
+	<!-- Задаем заголовок документа -->
+	<title>Lesson 1</title>
+	<!-- Определяем кодировку символов документа -->
+	<meta charset="utf-8">
+	<!-- Подключаем внешнюю таблицу стилей -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Подключаем сценарии -->
+	<script src="script.js"></script>
+</head>
+<!-- Основная часть документа -->
+<body>
+	<!-- Блочный элемент с классом big_div -->
+	<div class="big_div">
+		<!-- Ребенок дива с классом big_div -->
+		<div class="med_div">
+			<!-- Заголовки. От самого большого до 4го -->
+			<h1>Hello World</h1>
+			<h2>Hello World</h2>
+			<h3>Hello World</h3>
+			<h4>Hello World</h4>
+		</div>
+		<!-- Рабочие заголовки с id, в которые наш скрипт будет вписывать логин, пароль -->
+		<h1 id="x1">HELLO, TOMSK</h1>
+		<h1 id="x2">HELLO, TOMSK</h1>
+
+		<!-- Ребенок дива с классом big_div -->
+		<div class="med_div">
+			<!-- Заголовки и обычный текст <p> -->
+			<h5>Hello World</h5>
+			<h6>Hello World</h6>
+			<p>Hello World</p>
+		</div>
+
+		<!-- Поле для ввода информации типа text и id="login" -->
+		<input placeholder="Login" id="login" type="text" name="">
+		<!-- Поле для ввода информации типа пароль и id="password" -->
+		<input placeholder="Password" id="password" type="password" name="">
+		<!-- Кнопка, вызывающая функцию action_yo -->
+		<button onclick="action_yo()" class="btn1">Click me</button><br>
+
+		<!-- Закомеммнтированная гиперссылка -->
+		<!-- <a href="https://google.com">Click me, please, my brother</a> -->
+	</div>
+</body>
+</html>
