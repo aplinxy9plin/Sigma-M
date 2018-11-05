@@ -1,4 +1,4 @@
-var object2 = {
+var object = {
   ymaps: {
     xmlns: 'http://maps.yandex.ru/ymaps/1.x',
     xmlsis: 'http://www.w3.org/2001/XMLSchema-instance',
