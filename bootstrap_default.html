@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <input
+      class="col-3 form-control"
+      type="text"
+      id="inp"
+      onkeyup="check(this.value)"
+      data-placement="bottom"
+      data-html="true"
+      data-toggle="popover"
+      data-content="
+                    <button onclick='change()'>Изменить</button>
+                    <button onclick='cancel()'>Отмена</button>"
+      >
+      <button class="btn btn-lg btn-success" type="button" onclick="clear()">Send</button>
+
+      <br>
+
+      <button class="btn btn-lg btn-success" type="button" onclick="show()">Show</button>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function show(){
+    $('#inp').popover('toggle')
+  }
+  function cancel(){
+    $('#inp').popover('hide')
+  }
+  var words = [
+    {
+      good: "Редиска",
+      bad: "Черт"
+    },
+    {
+      good: "Супчанский",
+      bad: "Суп"
+    }
+  ]
+  var good_word, bad_word;
+  function check(value){
+    for (var i = 0; i < words.length; i++) {
+      if(value.indexOf(words[i].bad) !== -1){
+        $('#inp').popover('toggle')
+        good_word = words[i].good
+        bad_word = words[i].bad
+      }
+    }
+  }
+  function change(){
+    var value = $('#inp').val()
+    $('#inp').val(
+                  value.replace(bad_word, good_word)
+                 )
+  }
+</script>
+</body>
+</html>
